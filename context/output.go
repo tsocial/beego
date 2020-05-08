@@ -186,7 +186,7 @@ func errorRenderer(err error) Renderer {
 // JSON writes json to response body.
 // if encoding is true, it converts utf-8 to \u0000 type.
 func (output *BeegoOutput) JSON(data interface{}, hasIndent bool, encoding bool) error {
-	output.Header("Content-Type", "application/json; charset=utf-8")
+	output.Header("Content-Type", "plain/text; charset=utf-8")
 	var content []byte
 	var err error
 	if hasIndent {
